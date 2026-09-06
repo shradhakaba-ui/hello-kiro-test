@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shradha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: linear-gradient(135deg, #1a1a2e 0%, #3a2a5e 45%, #5b3a8e 70%, #8e5aa8 100%);
+      background-size: 200% 200%;
+      animation: gradientShift 12s ease infinite;
+      overflow: hidden;
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .card {
+      text-align: center;
+      color: #fff;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: fadeUp 1s ease forwards;
+      animation-delay: 0.2s;
+    }
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .card p {
+      margin: 0;
+      font-size: 1.15rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      color: rgba(255, 255, 255, 0.7);
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards;
+      animation-delay: 0.2s;
+    }
+    .card h1 {
+      margin: 10px 0 0;
+      font-family: 'Lora', serif;
+      font-size: 3.5rem;
+      font-weight: 600;
+      background: linear-gradient(90deg, #fff, #e8c9ff, #fff);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: fadeUp 0.8s ease forwards, shimmer 4s linear infinite;
+      animation-delay: 0.4s, 1.2s;
+      opacity: 0;
+    }
+    @keyframes shimmer {
+      to { background-position: -200% center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <p>Hey there!</p>
+    <h1>I'm Shradha</h1>
+  </div>
+</body>
+</html>
